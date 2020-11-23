@@ -5,11 +5,10 @@ function palindromeCheck(words) {
 
     for (let i = 0; i < words.length; i++) {
         let p = words[i].split("").reverse().join("");
-        if (p === words[i]) {
+        if (p.replaceAll(" ", "") === words[i].replaceAll(" ", "")) {
             palindromes.push(words[i]);
         }
     }
-
     console.log(palindromes);
 }
 palindromeCheck(words);
